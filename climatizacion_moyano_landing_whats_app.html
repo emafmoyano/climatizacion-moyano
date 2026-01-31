@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Climatización Moyano | Instalación y Service de Aire Acondicionado</title>
+  <meta name="description" content="Climatización Moyano. Instalación, desinstalación, mantenimiento y carga de refrigerante. Atención en CABA y GBA. Cotizá por WhatsApp." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111b31;
+      --text:#e8eefc;
+      --muted:#b6c3e6;
+      --accent:#4ade80;
+      --accent2:#22c55e;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 35px rgba(0,0,0,.35);
+      --radius:18px;
+      --max: 980px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: radial-gradient(1000px 600px at 10% 0%, rgba(34,197,94,.18), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(59,130,246,.16), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    header{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 10px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:44px;height:44px;border-radius:12px;
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(34,197,94,.35));
+      box-shadow: var(--shadow);
+      display:grid;place-items:center;
+      font-weight:800;color:#05210f;
+    }
+    .brand h1{font-size:16px;margin:0}
+    .brand p{margin:2px 0 0;color:var(--muted);font-size:13px}
+    .btn{
+      border:1px solid var(--border);background:rgba(255,255,255,.06);
+      color:var(--text);padding:10px 14px;border-radius:14px;
+      font-weight:650;text-decoration:none;cursor:pointer
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border:0;color:#05210f;
+      box-shadow: 0 12px 25px rgba(34,197,94,.18);
+    }
+    .container{max-width:var(--max);margin:0 auto;padding: 10px 18px 80px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    @media (max-width:860px){.hero{grid-template-columns:1fr}}
+    .card{
+      background: rgba(17,27,49,.86);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    h2{margin:0 0 10px;font-size:34px;line-height:1.1}
+    .sub{margin:0 0 14px;color:var(--muted)}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{border:1px solid var(--border);padding:8px 10px;border-radius:999px;font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+    label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
+    input,select,textarea{
+      width:100%;border:1px solid var(--border);background:rgba(255,255,255,.06);
+      color:var(--text);padding:12px;border-radius:14px
+    }
+    textarea{min-height:90px}
+    .wa-float{
+      position:fixed;right:16px;bottom:16px;z-index:999;
+      padding:12px 16px;border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#05210f;font-weight:800;text-decoration:none
+    }
+    footer{max-width:var(--max);margin:0 auto;padding:18px;color:var(--muted);font-size:12px}
+  </style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">AC</div>
+    <div>
+      <h1>Climatización Moyano</h1>
+      <p>Instalación y service de aire acondicionado · CABA y GBA</p>
+    </div>
+  </div>
+  <a class="btn primary" href="#" id="topWA">Cotizar por WhatsApp</a>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="card">
+      <h2>Soluciones en climatización</h2>
+      <p class="sub">Instalación, desinstalación y mantenimiento de equipos de aire acondicionado. Atención personalizada en CABA y GBA.</p>
+      <div class="chips">
+        <div class="chip">✔ Instalación</div>
+        <div class="chip">✔ Desinstalación</div>
+        <div class="chip">✔ Mantenimiento</div>
+        <div class="chip">✔ Carga de refrigerante</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Pedí tu cotización</h3>
+      <label>Nombre</label>
+      <input id="nombre" placeholder="Tu nombre" />
+      <label>Zona</label>
+      <input id="zona" placeholder="Barrio / Localidad" />
+      <label>Servicio</label>
+      <select id="tipo">
+        <option>Instalación</option>
+        <option>Desinstalación</option>
+        <option>Mantenimiento</option>
+        <option>Carga de refrigerante</option>
+      </select>
+      <label>Detalle (opcional)</label>
+      <textarea id="detalle"></textarea>
+      <a class="btn primary" href="#" id="formWA" style="display:inline-block;margin-top:12px">Enviar por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<a class="wa-float" href="#" id="floatWA">🟢 WhatsApp</a>
+
+<footer>
+  © <span id="year"></span> Climatización Moyano · CABA y GBA
+</footer>
+
+<script>
+  const WHATSAPP_NUMBER = "5491140331534";
+
+  function mensaje(){
+    const n = nombre.value.trim();
+    const z = zona.value.trim();
+    const t = tipo.value;
+    const d = detalle.value.trim();
+    let m = "Hola";
+    if(n) m += ", soy " + n;
+    m += ". Quería pedir una cotización.\n\n";
+    m += "• Servicio: " + t + "\n";
+    if(z) m += "• Zona: " + z + "\n";
+    if(d) m += "• Detalle: " + d + "\n";
+    return m;
+  }
+  function abrirWA(){
+    const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(mensaje());
+    window.open(url,"_blank");
+  }
+  topWA.onclick = (e)=>{e.preventDefault();abrirWA()};
+  formWA.onclick = (e)=>{e.preventDefault();abrirWA()};
+  floatWA.onclick = (e)=>{e.preventDefault();abrirWA()};
+  year.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
